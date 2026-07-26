@@ -19,10 +19,7 @@ class Settings(BaseSettings):
     SUPABASE_KEY: str = os.getenv("SUPABASE_KEY", "sb_publishable_EH7JXtr2G74QSB_4DafweA_HdR6LtIj")
     
     CORS_ORIGINS: list = [
-        "http://localhost:5173",
-        "http://localhost:3000",
-        "https://foodbridge-black.vercel.app",
-        "https://huge-mangos-make.loca.lt"
+        "*"
     ]
 
     class Config:

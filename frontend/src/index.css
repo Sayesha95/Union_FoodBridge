@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #0a0f0a;
+    color: #e8f0e8;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+/* Glassmorphism Card Style */
+.glass-panel {
+  background: rgba(20, 26, 20, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(31, 43, 31, 0.9);
+}
+
+.glass-panel-hover {
+  transition: all 0.2s ease-in-out;
+}
+.glass-panel-hover:hover {
+  border-color: rgba(34, 197, 94, 0.35);
+  box-shadow: 0 8px 32px rgba(22, 163, 74, 0.08);
+}
+
+/* Leaflet Map overrides for dark theme */
+.leaflet-container {
+  background: #0d140d !important;
+  border-radius: 0.75rem;
+  z-index: 1;
+}
+.leaflet-tile {
+  filter: brightness(0.6) invert(1) contrast(3) hue-rotate(200deg) saturate(0.3) brightness(0.7) !important;
+}
+.leaflet-popup-content-wrapper, .leaflet-popup-tip {
+  background: #141a14 !important;
+  color: #e8f0e8 !important;
+  border: 1px solid #2a3a2a !important;
+}
